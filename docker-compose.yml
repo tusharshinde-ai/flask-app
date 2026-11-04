@@ -1,6 +1,6 @@
 services:
 
   web:
-    image: ${{ vars.DOCKERHUB_USER }}/flask-app:latest
+    image: ${DOCKERHUB_USER}/flask-app:latest
     ports:
       - "80:80"
