@@ -1,5 +1,5 @@
 # Scan the Dockerfile for issue & CVEs
-name: Docker Lint
+name: Docker Lint New
 on: 
   workflow_call:
 jobs:
