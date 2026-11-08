@@ -27,6 +27,8 @@ jobs:
           context: .
           file: Dockerfile.multistage
           push: true
+          pull: true
+          no-cache: true
           tags: |
             ${{ vars.DOCKERHUB_USER }}/${{ github.event.repository.name }}:${{ github.ref_name }}
             ${{ vars.DOCKERHUB_USER }}/${{ github.event.repository.name }}:latest
