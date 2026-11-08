@@ -8,6 +8,7 @@ jobs:
 
   secret-scan:
     uses: ./.github/workflows/secret-scan.yml
+    secrets: inherit
 
   dependancy-scan:
     uses: ./.github/workflows/dependency-scan.yml
