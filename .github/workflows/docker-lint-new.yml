@@ -1,7 +1,8 @@
 # Scan the Dockerfile for issue & CVEs
 name: Docker Lint New
 on: 
-  workflow_call:
+  push:
+    branches: [main]
 jobs:
   Validate-Dockerfile:
     runs-on: ubuntu-latest
