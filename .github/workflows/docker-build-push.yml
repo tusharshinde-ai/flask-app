@@ -2,7 +2,7 @@
 name: Docker Build and Push
 
 on:
-  workflow_dispatch:
+  workflow_call: 
 
 permissions:
   contents: read
@@ -25,6 +25,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: .
+          file: Docker.multistage
           push: true
           tags: |
             ${{ vars.DOCKERHUB_USER }}/${{ github.event.repository.name }}:${{ github.ref_name }}
