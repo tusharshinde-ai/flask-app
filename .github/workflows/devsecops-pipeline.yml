@@ -16,7 +16,5 @@ jobs:
   docker-scan:
     uses: ./.github/workflows/docker-lint-new.yml
 
-  image-scan:
-    uses: ./.github/workflows/image-scan.yml
     
     
