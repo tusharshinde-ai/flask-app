@@ -21,8 +21,8 @@ jobs:
           context: .
           push: true
           tags: |
-              ${{ vars.DOCKERHUB_USER }}/${{ github.event.repository.name }}:${{ github.ref_name }}
+              ${{ vars.DOCKERHUB_USER }}/${{ github.event.repository.name }}:${{ github.ref_name }} # branch
               ${{ vars.DOCKERHUB_USER }}/${{ github.event.repository.name }}:latest
-              ${{ vars.DOCKERHUB_USER }}/${{ github.event.repository.name }}:${{ github.sha }}
+              ${{ vars.DOCKERHUB_USER }}/${{ github.event.repository.name }}:${{ github.sha }} # commit ID
           
           
