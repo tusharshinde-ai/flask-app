@@ -4,7 +4,9 @@ WORKDIR /app
 
 COPY requirements.txt .
 
-RUN pip install --no-cache-dir -r requirements.txt --target=/app/deps
+RUN pip install --no-cache-dir \
+    -r requirements.txt \
+    --target=/app/deps
 
 COPY . .
 
