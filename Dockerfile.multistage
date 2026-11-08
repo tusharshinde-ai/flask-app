@@ -8,7 +8,7 @@ RUN pip install --no-cache-dir -r requirements.txt --target=/app/deps
 
 COPY . .
 
-FROM gcr.io/distroless/python3:debug-nonroot AS deployer
+FROM gcr.io/distroless/python3-debian13:nonroot AS deployer
 
 WORKDIR /app
 
